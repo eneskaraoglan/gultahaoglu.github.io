@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gül Tahaoglu</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header class="container">
+  <div class="hero">
+    <img class="avatar" src="assets/avatar.jpg" alt="Gül Tahaoglu" />
+    <div>
+      <h1>Gul Tahaoglu, PhD</h1>
+      <p>Computer Engineer • Turkey</p>
+      <p>
+        <a href="mailto:tahaoglugul@gmail.com">tahaoglugul@gmail.com</a> •
+        <a href="https://github.com/gultahaoglu" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#news">News</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section id="home">
+    <h2>About</h2>
+    <p>Kısa biyografi…</p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>Makale 1…</li>
+      <li>Makale 2…</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Project Name</h3>
+      <p>Kısa açıklama…</p>
+      <p><a href="https://github.com/gultahaoglu/REPO_ADI">Repo</a></p>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>News & Updates</h2>
+    <ul class="news">
+      <li><span class="date">01/2026</span> — Haber metni…</li>
+      <li><span class="date">12/2025</span> — Haber metni…</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="container footer">
+  <small>© <span id="y"></span> Gül Tahaoglu</small>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
