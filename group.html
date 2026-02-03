@@ -8,15 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        :root {
-            --primary-text: #2c3e50;
-            --secondary-text: #546e7a;
-            --accent-color: #B08D57;
-            --accent-light: #f0eadd;
-            --bg-body: #fdfdfd;
-            --border-color: #e0e0e0;
-            --header-height: 80px;
-        }
+        :root { --primary-text: #2c3e50; --secondary-text: #546e7a; --accent-color: #B08D57; --accent-light: #f0eadd; --bg-body: #fdfdfd; --border-color: #e0e0e0; --header-height: 80px; }
         body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; color: var(--primary-text); background-color: var(--bg-body); line-height: 1.7; display: flex; flex-direction: column; min-height: 100vh; }
         a { text-decoration: none; color: var(--accent-color); transition: all 0.3s ease; }
         a:hover { color: #8a6b3e; }
@@ -25,7 +17,7 @@
         .header-content { display: flex; justify-content: space-between; align-items: center; width: 100%; }
         .brand-wrapper { display: flex; align-items: center; }
         .site-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--primary-text); margin: 0; letter-spacing: 0.5px; }
-        .lotus-icon { width: 38px; height: 38px; fill: var(--accent-color); margin-left: 12px; filter: drop-shadow(0 2px 3px rgba(176, 141, 87, 0.3)); }
+        .rose-icon { color: var(--accent-color); margin-left: 12px; font-size: 1.4rem; }
         .main-nav { display: flex; gap: 30px; }
         .main-nav a { font-weight: 500; color: var(--secondary-text); font-size: 0.95rem; position: relative; padding: 5px 0; }
         .main-nav a:hover, .main-nav a.active { color: var(--accent-color); }
@@ -35,9 +27,7 @@
         h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--primary-text); margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
         .breadcrumbs { font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 20px; }
         .breadcrumbs .current { color: var(--accent-color); font-weight: 500; }
-        
-        /* EKİP STİLİ */
-        .team-section { margin-bottom: 50px; }
+
         .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; margin-top: 20px; }
         .team-member { text-align: center; border: 1px solid #eee; padding: 30px 20px; border-radius: 8px; background: #fff; transition: 0.3s; }
         .team-member:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: var(--accent-color); }
@@ -56,7 +46,7 @@
     <div class="container header-content">
         <div class="brand-wrapper">
             <div class="site-title">Dr. Gul Tahaoglu</div>
-            <svg class="lotus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.529 1.259 4.347 2.917.558 1.131 1.199 2.431 2.564 2.431 1.993 0 2.648-1.578 2.648-2.504l-.002.004c0 3.635-2.713 6.476-6.111 6.476-1.316 0-2.369-.366-3.446-.876-1.077.51-2.129.876-3.446.876-3.397 0-6.111-2.841-6.111-6.476l-.002-.004c0 .926.655 2.504 2.648 2.504 1.365 0 2.007-1.3 2.564-2.431.818-1.658 1.143-2.917 4.347-2.917zm0 21.837c-4.324 0-8.588-1.848-10.705-5.513-.489-.847-.783-2.658-.831-4.329 1.997 1.82 5.74 4.779 11.536 4.779 5.795 0 9.538-2.959 11.535-4.779-.047 1.671-.341 3.482-.831 4.329-2.117 3.665-6.38 5.513-10.704 5.513zm6.773-11.714c-1.784 1.174-4.025 1.989-6.773 1.989-2.749 0-4.99-.815-6.774-1.989-2.047-1.348-2.876-2.976-3.092-4.943 2.727 1.796 7.177 3.69 9.866 3.69 2.691 0 7.143-1.895 9.867-3.69-.216 1.967-1.046 3.595-3.094 4.943z"/></svg>
+            <i class="fas fa-spa rose-icon"></i>
         </div>
         <nav class="main-nav">
             <a href="index.html">Home</a>
@@ -76,7 +66,7 @@
     <h2>Research Group</h2>
 
     <p style="margin-bottom: 40px; font-size: 1.1rem; color: #555;">
-        We are always looking for motivated MSc and PhD students to join our lab. If you are interested in our research areas (Deepfake Detection, Multimedia Forensics, AI), please send an email with your CV.
+        We are always looking for motivated MSc and PhD students to join our lab.
     </p>
 
     <div class="team-section">
@@ -100,14 +90,11 @@
     </div>
 
     <div class="team-section">
-        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary-text); margin-bottom: 15px;">Alumni</h3>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary-text); margin-bottom: 15px; margin-top: 40px;">Alumni</h3>
         <ul style="list-style: none; padding: 0;">
-            <li style="padding: 10px 0; border-bottom: 1px dashed #eee;">
-                No alumni yet.
-            </li>
+            <li style="padding: 10px 0; border-bottom: 1px dashed #eee;">No alumni yet.</li>
         </ul>
     </div>
-
 </main>
 
 <footer class="site-footer">
