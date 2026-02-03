@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- YENİ GOLD & LOTUS TEMA AYARLARI --- */
+        /* --- TEMA AYARLARI --- */
         :root {
-            --primary-text: #2c3e50;    /* Koyu Lacivert/Gri */
-            --secondary-text: #546e7a;  /* Orta Gri */
-            --accent-color: #B08D57;    /* YENİ GOLD/BRONZ RENK */
-            --accent-light: #f0eadd;    /* Gold'un çok açık tonu (arkaplanlar için) */
-            --bg-body: #fdfdfd;         /* Kırık Beyaz Arkaplan */
+            --primary-text: #2c3e50;
+            --secondary-text: #546e7a;
+            --accent-color: #B08D57;    /* GOLD RENK */
+            --accent-light: #f0eadd;
+            --bg-body: #fdfdfd;
             --border-color: #e0e0e0;
             --header-height: 80px;
         }
@@ -30,7 +30,7 @@
         }
 
         a { text-decoration: none; color: var(--accent-color); transition: all 0.3s ease; }
-        a:hover { color: #8a6b3e; } /* Gold'un koyusu */
+        a:hover { color: #8a6b3e; }
 
         .container {
             max-width: 1100px;
@@ -38,7 +38,7 @@
             padding: 0 25px;
         }
 
-        /* --- HEADER (ÜST MENÜ) --- */
+        /* --- HEADER --- */
         .site-header {
             background: #fff;
             border-bottom: 1px solid var(--border-color);
@@ -57,6 +57,7 @@
             width: 100%;
         }
         .brand-wrapper { display: flex; align-items: center; }
+        
         .site-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
@@ -66,13 +67,11 @@
             letter-spacing: 0.5px;
         }
 
-        /* YENİ DETAYLI GOLD LOTUS İKONU */
-        .lotus-icon {
-            width: 38px;
-            height: 38px;
-            fill: var(--accent-color);
+        /* --- SENİN İSTEDİĞİN SPA İKONU AYARLARI --- */
+        .rose-icon {
+            color: var(--accent-color); /* Gold rengini buraya verdik */
             margin-left: 12px;
-            filter: drop-shadow(0 2px 3px rgba(176, 141, 87, 0.3)); /* Hafif gold gölge */
+            font-size: 1.4rem; /* Boyutunu ayarladık */
         }
 
         .main-nav { display: flex; gap: 30px; }
@@ -90,11 +89,11 @@
         }
         .main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
 
-        /* --- HERO SECTION (Ana Sayfa Karşılama) --- */
+        /* --- HERO SECTION --- */
         .hero {
             text-align: center;
             padding: 60px 0 50px;
-            background: linear-gradient(to bottom, var(--accent-light), #fff); /* Hafif gold geçiş */
+            background: linear-gradient(to bottom, var(--accent-light), #fff);
             border-bottom: 1px solid var(--border-color);
         }
         .profile-img {
@@ -103,7 +102,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #fff;
-            box-shadow: 0 10px 25px rgba(176, 141, 87, 0.2); /* Gold gölge */
+            box-shadow: 0 10px 25px rgba(176, 141, 87, 0.2);
             margin-bottom: 25px;
         }
         .hero h1 {
@@ -138,7 +137,7 @@
             transform: translateY(-3px);
         }
 
-        /* --- MAIN CONTENT STYLES --- */
+        /* --- İÇERİK --- */
         section { padding: 70px 0; }
         h2 {
             font-family: 'Playfair Display', serif;
@@ -154,18 +153,6 @@
         }
         p { margin-bottom: 20px; font-weight: 300; font-size: 1.05rem; }
 
-        /* (Yeni Özellik) İlgi Alanı Rozetleri */
-        .key-areas { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 25px; }
-        .area-badge {
-            background: var(--accent-light);
-            color: var(--accent-color);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid rgba(176, 141, 87, 0.2);
-        }
-
         /* --- FOOTER --- */
         .site-footer {
             background: var(--primary-text);
@@ -173,16 +160,13 @@
             padding: 40px 0;
             text-align: center;
             font-size: 0.9rem;
-            margin-top: auto; /* Sayfa kısa olsa bile en alta iter */
+            margin-top: auto;
         }
 
-        /* MOBİL UYUM */
         @media (max-width: 768px) {
             .header-content { flex-direction: column; gap: 15px; padding: 15px 0; }
             .site-header { height: auto; }
             .main-nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .hero { padding: 40px 0; }
-            .profile-img { width: 150px; height: 150px; }
         }
     </style>
 </head>
@@ -192,9 +176,7 @@
     <div class="container header-content">
         <div class="brand-wrapper">
             <div class="site-title">Dr. Gul Tahaoglu</div>
-            <svg class="lotus-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <path d="M256 0c-26.5 0-48 21.5-48 48l0 19c-36.9-10-76.3-4.5-108.8 17.6c-48.5 33-68.6 96.2-46.5 150.3l3.6 8.8c9.5 23.3 35.2 36.3 59.4 30.2c24.2-6.1 39-30.8 33.7-55.2l-3.3-15.1c-9.6-44.5 28.5-84.3 73.9-77.2l36 5.6 0 331.8-71.5 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l192 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-71.5 0 0-332.1 35.7-5.4c45.5-6.8 83.7 32.7 74.2 77.2l-2.6 12.3c-5.1 24.3 9.9 48.9 34.2 54.7c24.2 5.8 49.6-7.5 58.7-30.8l2.9-7.5c22.1-56.7 1.6-122.2-48.8-154.9c-32.3-21-71.4-25.9-107.9-15.6l0-19.3c0-26.5-21.5-48-48-48z"/>
-</svg>
+            <i class="fas fa-spa rose-icon"></i>
         </div>
         <nav class="main-nav">
             <a href="index.html" class="active">Home</a>
@@ -215,10 +197,10 @@
             Karadeniz Technical University
         </div>
         <div class="social-links">
-            <a href="mailto:gultahaoglu@ktu.edu.tr" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://avesis.ktu.edu.tr/gultahaoglu" target="_blank" title="AVESIS"><i class="fas fa-university"></i></a>
-            <a href="https://scholar.google.com/citations?user=eioRC-MAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://github.com/gultahaoglu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:gultahaoglu@ktu.edu.tr"><i class="fas fa-envelope"></i></a>
+            <a href="https://avesis.ktu.edu.tr/gultahaoglu" target="_blank"><i class="fas fa-university"></i></a>
+            <a href="https://scholar.google.com/citations?user=eioRC-MAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://github.com/gultahaoglu" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </section>
@@ -232,13 +214,6 @@
         <p>
             I am passionate about developing robust AI solutions for digital media integrity, specifically focusing on detecting manipulated content such as deepfakes and analyzing audio/visual anomalies for forensic investigations.
         </p>
-        
-        <div class="key-areas">
-            <span class="area-badge">Deepfake Detection</span>
-            <span class="area-badge">Multimedia Forensics</span>
-            <span class="area-badge">AI in Security</span>
-            <span class="area-badge">Signal Processing</span>
-        </div>
     </section>
 
     <section style="padding-top: 30px;">
